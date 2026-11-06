@@ -18,7 +18,7 @@ app.use(compression());
 app.get("/health", (_req, res) => res.send("ok"));
 
 app.get("/", (_req, res) => {
-  res.sendFile(GAME_FILE, { maxAge: "1h" });
+  res.sendFile(GAME_FILE, { maxAge: "0" });
 });
 
 app.use(express.static(__dirname, { index: false, dotfiles: "ignore" }));
